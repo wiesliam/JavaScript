@@ -86,9 +86,11 @@
 	  	ctx.strokeStyle = color;
 	  	ctx.lineWidth = width;
 	  	console.log(ctx.lineWidth);
+	  	ctx.beginPath();
 	    ctx.moveTo(lastPos.x, lastPos.y);
 	    ctx.lineTo(mousePos.x, mousePos.y);
 	    ctx.stroke();
+	    ctx.closePath();
 	    lastPos = mousePos;
 	  }
 	}
